@@ -1,0 +1,36 @@
+BMW.csv içindeki bazı değerleri aşağıdaki gibi düzenleyerek DATA.csv'yi elde ettik ve kullandık.
+
+Petrol,1
+Diesel,2
+Hybrid,3
+Electric,4
+Other,5
+
+1 Series,1
+2 Series,2
+3 Series,3
+4 Series,4
+5 Series,5
+6 Series,6
+7 Series,7
+8 Series,8
+i3,9
+i8,10
+M2,11
+M3,12
+M4,13
+M5,14
+M6,15
+x1,16
+x2,17
+x3,18
+x4,19
+x5,20
+x6,21
+x7,22
+Z3,23
+Z4,24
+
+Manual,1
+Automatic,2
+Semi-Auto,3

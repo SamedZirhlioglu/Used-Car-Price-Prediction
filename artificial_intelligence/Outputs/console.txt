@@ -1,0 +1,39 @@
+count    10780.000000      
+mean     22724.065399      
+std      11374.757162      
+min       1200.000000      
+25%      14950.000000      
+50%      20461.000000      
+75%      27940.000000      
+max      99950.000000      
+Name: price, dtype: float64
+
+ALL SCORES
+Decision Tree Regressor: 0.9209599519343693
+Gradient Boosting Regressor: 0.9296888039267556
+XGB Regressor: 0.9538406088436532
+Random Forest Regressor: 0.9533153828597135
+LGBM Regressor: 0.9533280823350206
+Cat Boost Regressor: 0.9614980565363914
+
+ALL CROSS VALIDATON SCORES (MEAN)
+Decision Tree Regressor Cross-Validation Score: 0.9160299551662408
+Decision Tree Regressor Standard Deviation Score: 0.028224395396409696
+Gradient Boosting Regressor Cross-Validation Score: 0.9356295407330328
+Gradient Boosting Regressor Standard Deviation Score: 0.02311549210148323
+XGB Regressor Cross-Validation Score: 0.9512505363872313
+XGB Regressor Standard Deviation Score: 0.023325786568537402
+Random Forest Regressor Cross-Validation Score: 0.9485940928097862
+Random Forest Regressor Standard Deviation Score: 0.021645070983239627
+LGBM Regressor Cross-Validation Score: 0.9531683892604611
+LGBM Regressor Standard Deviation Score: 0.019631854588236443
+Cat Boost Regressor Cross-Validation Score: 0.9562245745628345
+Cat Boost Regressor Standard Deviation Score: 0.021938762400052794
+
+ALL MSE SCORES
+Decision Tree Regressor: 0.08256761753663422
+Gradient Boosting Regressor: 0.06579648647806537
+XGB Regressor: 0.04470297357529873
+Random Forest Regressor: 0.04532149632147587
+LGBM Regressor: 0.044979884324875055
+Cat Boost Regressor: 0.037226070582476796
