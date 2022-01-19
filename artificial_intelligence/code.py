@@ -19,7 +19,7 @@ from matplotlib.colors import Normalize
 sns.set(font_scale=1.5)
 
 # Veri seti tanımlandı
-data = pd.read_csv('./data.csv')
+data = pd.read_csv('data.csv')
 df = zscore(pd.DataFrame(data))
 
 # Veri seti X-y olarak ayrıldı.

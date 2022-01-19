@@ -64,7 +64,7 @@ Used Car Price Prediction with Machine Learning Algorithms
 \thispagestyle{plain}
 \pagestyle{plain}
 \begin{ozet}
-Araçlar hayatımızda çok eskiden beri var olan ve hayatımızı kolaylaştıran icatlardır. Özellikle günümüzde, artık hayatımızın her alanında olmazsa olmazlarımızdandır. Bu göz önüne alınarak bir çok marka ve model üretilmiştir. Bu markalardan birisi de BMW’ dir. BMW’ nin her yıla özel ve farklı özelliklerde birçok modeli mevcuttur. Bu araçların özellikleri (model, yıl, şanzıman, mil, yakıt tipi, vergi, mesafe başına yakıt tüketimi, motor, fiyat) incelenerek aracın değeri tahmin edilebilir. Bu değerleri incelemek için yapay zeka algoritmalarını (Karar Ağacı, Gradient Boost, XGB, Rastgele Orman Ağacı, LightGBM, CatBoost) kullandık. Kullandığımız algoritmaların tamamı regresyon algoritmalarından oluşmakta. Bunun nedeni ise elimizdeki bağımsız değişkenlerden hareketle, yeni bir bağımlı değişken elde etmek istememizdir.
+Teknolojinin çok hızlı ilerlemesine bağlı olarak otomotiv sektörü de hızlı bir şekilde gelişmektedir. Bundan kaynaklı olarak artan üretim çeşitliliği, ikinci el piyasasında da büyük etki bırakmaktadır. İkinci el piyasası aktörlerinin araç alım ve satışlarında piyasanın durumunu iyi anlayarak buna göre araç ve fiyat tespitlerini yapmaları çok önem arz etmektedir. Otomotiv sektörü yolcu ve yük taşıma amaçlarına bağlı olarak birçok ana ve alt başlıkta üretim yapmaktadır. Yapılacak çalışmamızda kişisel kullanıma yönelik BMW markası gibi özgün bir otomobil markası üzerinden modelleme yapılacaktır. BMW firması her yıl farklı teknik, donanım ve dizayn özelliklerde yeni model araçları üretmektedir. Bu markaya ait araçların özellikleri (model, yıl, motor, şanzıman, Km./Mil, yakıt tipi, vergi, yakıt tüketimi, fiyat vb.) incelenerek aracın değeri tahmin edilebilir. Yapay zekâ algoritmaları (Karar Ağacı, Gradient Boost, XGB, Rastgele Orman Ağacı, LightGBM, CatBoost) kullanılarak bu değerler incelenmiştir. Projedeki sorunun tipinden dolayı regresyon algoritmalarına yer verilmiştir. Bunun nedeni ise elimizdeki bağımsız değişkenlerden hareketle, yeni bir bağımlı değişken elde etmek istememizdir.
 \end{ozet}
 
 \begin{IEEEanahtar}
@@ -72,7 +72,7 @@ Araç, Araç Özellikleri, Karar Ağacı, Gradient Boost, XGB, Rastgele Orman A�
 \end{IEEEanahtar}
 
 \begin{abstract}
-Vehicles are inventions that have existed in our lives for a long time and make our lives easier. Especially nowadays, it is now an indispensable part of our lives. With this in mind, many brands and models have been produced. One of these brands is BMW. BMW has many models with different features and specific to each year. The value of the vehicle can be estimated by examining the characteristics of these vehicles (model, year, transmission, miles, fuel type, tax, fuel consumption per distance, engine, price). We used artificial intelligence algorithms (Decision Tree, Gradient Boost, XGB, Random Forest Tree, LightGBM, CatBoost) to examine these values. All of the algorithms we use are regression algorithms. The reason for this is that we want to obtain a new dependent variable based on the independent variables we have.
+Depending on the rapid progress of technology, the automotive industry is also developing rapidly. Due to this, the increasing variety of production also has a great impact on the second-hand market. It is very important for the second-hand market actors to understand the situation of the market in vehicle purchases and sales and to determine the vehicle and price accordingly. The automotive sector produces in many main and sub-titles depending on the purposes of passenger and cargo transportation. In our study, modeling will be done on a unique automobile brand such as BMW brand for personal use. Every year, BMW company produces new model vehicles with different technical, equipment and design features. The value of the vehicle can be estimated by examining the characteristics of the vehicles of this brand (model, year, engine, transmission, Km./Mile, fuel type, tax, fuel consumption, price, etc.). These values were examined using artificial intelligence algorithms (Decision Tree, Gradient Boost, XGB, Random Forest Tree, LightGBM, CatBoost). Regression algorithms are included due to the type of problem in the project. The reason for this is that we want to obtain a new dependent variable based on the independent variables we have.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -80,15 +80,15 @@ Car, Car Properties, Value, Decision Tree, Gradient Boost, XGB, Random Forest Tr
 \end{IEEEkeywords}
 
 \section{\textbf{GİRİŞ}}
-\quad Ulaşım, insanlık tarihinin başlangıcından günümüze kadar, insan hayatının en temel ihtiyaçlarından birisi olmuştur. Arabalar icat edilmeden önce ulaşım; at, eşek ve deve gibi hayvanlar kullanılarak sağlanmıştı. Bu durum hem zaman hem de emek kaybına neden olmuştur.
+\quad Ulaşım, insanlık tarihinin başlangıcından günümüze kadar, insan hayatının en temel ihtiyaçlarından birisi olmuştur. Arabalar icat edilmeden önce ulaşım; at, eşek ve deve gibi hayvanlar kullanılarak sağlanmıştır. Bu durum hem zaman hem de emek kaybına neden olmuştur.
 
-\quad Artan dünya nüfusu ve ihtiyaçlar doğrultusunda ulaşım çok büyük bir önem kazanmıştır. Bu ihtiyaçları gidermek ve ulaşımı daha kolay hale getirmek için yapılan çalışmalar hız kazanmıştır. Bu çalışmalar sonucunda insanlar ihtiyaçları doğrultusunda tarım ve ulaşım araçlarını geliştirmiştir. İlerleyen süreçte ise insanların daha konforlu ve keyifli bir ulaşım deneyimi yaşayabilmesi için çalışmalara devam edilmiştir.
+\quad Artan dünya nüfusu ve ihtiyaçlar doğrultusunda ulaşım çok büyük bir önem kazanmıştır. Bu ihtiyaçları gidermek ve ulaşımı daha kolay hale getirmek için yapılan çalışmalar hız kazanmıştır. Bu çalışmalar sonucunda insanlar ihtiyaçları doğrultusunda tarım ve ulaşım araçlarını geliştirmiştir. Günümüzde de insanların daha konforlu ve keyifli bir ulaşım deneyimi yaşayabilmesi için bu çalışmalar devam etmektedir.
 
-\quad Günümüzde otomobil sektörü, insanlık tarihinin en yaygın sektörlerinden ve yatırım yapılan iş kollarından  birisi olmuştur. Başlangıçta sadece ulaşım ve ticaret amaçlı kullanılan otomobiller, günümüzde lüks ve ihtişamlı yaşamın sembolü haline gelmiştir\cite{1}.
+\quad Günümüzde otomobil sektörü, insanlık tarihinin en yaygın sektörlerinden ve yatırım yapılan iş kollarından birisi olmuştur. Başlangıçta sadece ulaşım ve ticaret amaçlı kullanılan otomobiller, günümüzde lüks ve ihtişamlı yaşamın sembolü haline gelmiştir\cite{1}.
 
-\quad Arabalar uzun ömürlü oldukları için sürekli alınıp satılabilir. İkinci el olarak satılan araçların makul bir şekilde fiyatlandırılması gerekir. İkinci el bir aracın makul fiyat tahmininin yapılması zordur. Bu nedenle, ikinci el araçlar için doğru fiyat tahmin mekanizmasına ihtiyaç vardır\cite{2}. Bu makalede yapay zeka kullanarak ikinci el araçların fiyatlarını tahmin etmeye çalışacağız.
+\quad Arabalar uzun ömürlü araçlar oldukları için sürekli alınıp satılabilir. İkinci el olarak satılan araçların makul bir şekilde fiyatlandırılması gerekmektedir. İkinci el bir aracın makul fiyat tahmininin yapılması zor olduğu için doğru fiyatı belirleyecek bir tahmin mekanizmasına ihtiyaç duyulmaktadır\cite{2}. Bu makalede yapay zekâ kullanarak ikinci el araçların fiyatlarını tahmin etmeye çalışılacaktır.
 
-\quad Bu proje için, "100.000 UK Used Car Dataset" isimli veri setini\cite{3} Kaggle’dan temin ettik. Elde ettiğimiz veri seti içerisinden BMW marka aracın verilerini alarak gerekli ön işleme adımlarını yaptık. Veri setimizde 8 adet öznitelik (model, yıl, şanzıman, satış fiyatı, mil, yıllık vergisi, mesafe başına yakıt miktarı ve motor hacmi) bulunmaktadır. Düzenlediğimiz verilerin \%30'unu test, \%70'ini eğitim verisi olarak ayırdık.
+\quad Bu proje için, "100.000 UK Used Car Dataset" isimli veri seti\cite{3} Kaggle’dan temin edilmiştir. Elde edilen veri seti içerisindeki BMW marka araçların verileri alınarak gerekli ön işleme adımları yapılmıştır. Veri setinde 8 adet öznitelik (model, yıl, şanzıman, satış fiyatı, mil, yıllık vergisi, mesafe başına yakıt miktarı ve motor hacmi) bulunmaktadır. Düzenlediğimiz veriler \%30 test, \%70 eğitim verisi olarak ayrılmıştır.
 
 Kullandığımız özniteliklerin özellikleri;
 \begin{itemize}
@@ -102,7 +102,7 @@ Kullandığımız özniteliklerin özellikleri;
 \item \textbf{Motor hacmi:} Aracın motor büyüklüğü
 \end{itemize}
 
-\quad Bu veri setini kullanarak ve araçların özniteliklerini göz önünde bulundurarak aracın fiyat tahminini yaptık. Bu fiyat tahmininin daha doğru olması için; Karar Ağacı, Gradient Boost, XGB, Rastgele Orman Ağacı, LightGBM, CatBoost algoritmalarını kullandık. Projeyi Python dilinde, Visual Studio Code editöründe yazdık.
+\quad Bu veri seti kullanılarak ve araçların öznitelikleri göz önünde bulundurularak aracın fiyat tahmini yapılmıştır. Bu fiyat tahmininin daha doğru olması için; Karar Ağacı, Gradient Boost, XGB, Rastgele Orman Ağacı, LightGBM, CatBoost algoritmaları kullanılmıştır. Proje; Python dilinde, Visual Studio Code editöründe yazılmıştır.
 
 \begin{figure}[!h]
 	\centering
@@ -121,7 +121,7 @@ Projenin akış diyagramı Şekil \ref{fig:01}'de belirtilmiştir. Makalenin dev
 \section{\textbf{METODLAR}}
 \subsection{\textbf{Decision Tree}}
 
-\quad 	Karar ağaçları, genellikle regresyon ve sınıflandırma problemlerinde kullanılır. Ağaç tabanlı algoritmalardan birisi olup karmaşık veri setlerinde kullanılabilir\cite{4}.
+\quad Karar Ağaçları, genellikle regresyon ve sınıflandırma problemlerinde kullanılmaktadır. Ağaç tabanlı algoritmalardan birisi olup karmaşık veri setlerinde kullanılabilir\cite{4}.
 
 \begin{figure}[!h]
 	\centering
@@ -134,13 +134,13 @@ Projenin akış diyagramı Şekil \ref{fig:01}'de belirtilmiştir. Makalenin dev
 	\label{fig:02}
 \end{figure}
 
-\quad Kök (root), karar ağaçlarının ilk basamağına(hücresine) verilen isimdir. Problemimizi gözlemlerken, kök kısmındaki koşullar doğrultusunda sınıflandırma yaparız.
+\quad Kök (root), Karar Ağaçlarının ilk basamağına(hücresine) verilen isimdir. Problemimizi gözlemlerken, kök kısmındaki koşullar doğrultusunda sınıflandırma yapılır.
 
-\quad Kök hücrelerin altında düğümler (nodes) vardır. Ele aldığımız her bir gözlemi köklerin aracılığı ile sınıflandırırız. Düğüm sayısının artma oranıyla doğru otantılı bir şekilde, elimizde bulunan modelin karmaşıklığı da artar. Bize sonucu veren yapraklardır ve yapraklar ağacın en altında bulunur\cite{4}.
+\quad Kök hücrelerin altında düğümler (nodes) yer almaktadır. Ele aldığımız her bir gözlem kökler aracılığı ile sınıflandırılır. Düğüm sayısının artma oranıyla doğru orantılı bir şekilde, elimizde bulunan modelin karmaşıklığı da artmaktadır. Bize sonucu veren yapraklardır ve yapraklar ağacın en altında bulunmaktadır\cite{4}.
 
 \quad Kök hücre seçilirken dikkat edilmesi gereken en önemli etken, veri setini iyi açıklayabilmesidir. Köke karar verirken bizim için önemli bazı değerler vardır\cite{4};
 
-\quad Alt kümenin saflık değerine $Gini$ denir. $T$, $pj$, $j$ sınıfının gerçekleşme olasılığını verir. Elimizde bulunan her sınıf için hesaplanır ve elde ettiğimiz sonuçların karesininin toplamını birden çıkartırız. 0 ile 1 arasında bir değere sahiptir ve sonuç 0'a ne kadar yakın olursa o kadar iyi ayrım yapılmıştır denir\cite{4}. 
+\quad Alt kümenin saflık değerine $Gini$ denir ve $T$, $pj$, $j$ sınıfının gerçekleşme olasılığıdır. Elimizdeki her sınıf için ayrı ayrı hesaplanarak çıkan sonuçların karesi alınır. Alınan kareler $1$’den çıkartılır. Bu işlemler sonucunda $(0, 1)$ aralığında bir değer elde edilir. Elde edilen değer $0$’a ne kadar yakınsa o kadar iyi ayrım yapılmıştır\cite{4}.
 
 \quad $Gini$ indexinin formülü Eşitlik \ref{eq:01}'de verilmiştir\cite{15}. Formül değişkenlerinin temsil ettiği veriler de aşağıdaki gibidir;
 \begin{itemize}
@@ -165,16 +165,16 @@ Projenin akış diyagramı Şekil \ref{fig:01}'de belirtilmiştir. Makalenin dev
 \quad Entropi daha dengeli bir ağaç çıkarmaya meyilli iken $Gini$, frekansı fazla olan sınıfı ayrıştırmaya meyillidir.
 
 \subsection{\textbf{Gradient Boosting Regressor}}
-\quad Makine öğrenmesi modellerinde doğru tahminleri daha da güçlü bir hale getirmek için Gradient Boosting Regressor kullanılır. Karar ağacı tabanlı algoritmalardan oluşur, yinelemeli olarak çalışırlar. Oluşturulan ağaç yapısı, gelen hatayı en aza indirgeyecek eğilimde olması gerekmektedir. Bu algoritmaları en güçlü kılan bu faktördür\cite{6}.
+\quad Makine öğrenmesi modellerinde tahminlerin doğruluğunu güçlü bir hale getirmek için Gradient Boosting Regressor kullanılır. Yinelemeli olarak çalışan algoritma, karar ağacı tabanlıdır. Gradient Boosting Regressor algoritmasını güçlü kılan faktör; ağaç yapısının, hatayı en az seviyeye düşürecek şekilde olmasıdır\cite{6}.
 
-\quad Gradyan yükseltme algoritmasında en temel amaç, elde edeceğimiz maliyet fonksiyonunu en aza indirebilmek için parametreleri tekrarlamaktır. Ağaç eklerken kaybı en aza indirmek için gradyan iniş prosedürü kullanılır\cite{6}.
+\quad Gradient Boosting Regressor algoritmasındaki temel amaç, elde edilecek olan maliyet fonksiyonunu en aza düşürebilmek için bulunan parametreleri tekrarlamaktır. Ağaç ekleme işlemi yapılırken kaybı en aza düşürebilmek için gradyan iniş prosedürü kullanılmaktadır \cite{6}.
 
 Gradyan yükseltme üç unsur içerir:
 
 \begin{itemize}
 \item Optimize edilmesi beklenen kayıp fonksiyonun(loss) belirlenmesi. 
-\item Optimize edilmiş veride belirlenen zayıf öğrenci ile tahmin yapmak. 
-\item Loss’u minimum seviyeye indirgemek için zayıf öğrencilere bir katkı modeli eklenir\cite{7}.
+\item Optimize edilmiş veride belirlenen zayıf öğrenici ile tahmin yapmak. 
+\item Loss’u minimum seviyeye indirgemek için zayıf öğrenicilere bir katkı modeli eklenir\cite{7}.
 \end{itemize}
 
 \begin{figure}[!h]
@@ -194,19 +194,20 @@ Gradyan yükseltme üç unsur içerir:
 \end{equation}
 
 \pagebreak
-\subsection{\textbf{XGB Regressor}}
-\quad Gradyan yükseltme algoritmasını çeşitli düzenlemeler ile üstün performanslı haline dönüşmesine denir veya aşırı gradyan artırma olarak da bilinir\cite{9}. Yüksek tahmin gücü elde etmek, boş verileri yönetebilmek ve aşırı öğrenmenin önüne geçmeyi engellemekte oldukça hızlıdır\cite{10}. 
+\subsection{\textbf{XGB (Extreme Gradient Boosting) Regressor}}
 
-\quad XGB’nin kullanmanın en temel sebebi bulundurduğu kütüphanenin model performansı ve yürütme hızının yüksek olmasına dayanmaktadır\cite{9}.
+\quad XGBoost, problemleri diğer boosting algoritmalarına göre daha doğru bir yöntemle çözen bir ağaç güçlendirme algoritması olup paralel olarak çalışmaktadır\cite{9}. Tahmin gücünü yükseltmek ve aşırı öğrenmeyi engellemek, algoritmanın temel özelliklerindendir\cite{10}.
 
-\quad XGBoost algoritması kullanılırken öncelikle ilk tahmin (base score) yapılmalıdır. Sonraki adımlarda sonuç herhangi bir sayı olabilir. Çünkü yapılacak işlemler yakın sayarak doğru sonuca ulaşacaktır. Sonraki adımda hatalar tahminleyen karar ağacı kurulur. Bu adımdaki amaç hataları öğrenip doğru tahmine yaklaşmaktır. Benzerlik skoru (similarity score) verilerin dallarda ne kadar iyi gruplandığını gösterir. Bu skor oluşturulan ağacın her bir dalı için hesaplanır. 
+\quad XGB’yi tercih etmemizin sebebi, kütüphanesinin; model performansının yüksek ve çalışma süresinin düşük olmasıdır\cite{9}.
+
+\quad XGBoost algoritması kullanılırken öncelikle ilk tahmin (base score) yapılmalıdır. Sonraki adımlarda sonuç herhangi bir sayı olabilir. Çünkü yapılacak işlemler yakınsayarak doğru sonuca ulaşacaktır. Sonraki adımda hataları tahminleyen karar ağacı kurulur. Bu adımdaki amaç hataları öğrenip doğru tahmine yaklaşmaktır. Benzerlik skoru (similarity score) her ağacın her bir dalı için ayrı ayrı hesaplanır. Benzerlik skoru, elimizde bulunan verilerin dallarda ne kadar iyi kategorize olduğunu gösterir\cite{10}.
 
 \begin{equation}
 \label{eq:04}
 \large Similarity Score=\frac{Sum of Residuals, Squared}{Number of Residuals + \lambda}
 \end{equation}
 
-\quad 	Benzerlik skorlarını hesapladıktan sonra elde ettiğimiz sonuçtan daha iyi bir tahmin yapılıp yapılmayacağını öğrenmek için tüm olasılıklardaki ağaçlar kurulur. Hepsi için ayrı ayrı benzerlik skorları hesaplanır ve hangi ağacın daha etkili yani daha iyi olduğunu düzenlemek için Eşitlik \ref{eq:05}'deki kazanç hesabı yapılır\cite{10}. Yukarıda belirttiğimiz benzerlik skorunun sonucu ile dallar değerlendirilirken, elde ettiğimiz Eşitlik \ref{eq:05}'deki kazanç değeri ile ağacın tamamı değerlendirilmektedir\cite{10}.
+\quad Benzerlik skorlarını hesapladıktan sonra elde ettiğimiz sonuçtan daha iyi bir tahmin yapılıp yapılmayacağını öğrenmek için tüm olasılıklardaki ağaçlar kurulur. Hepsi için ayrı ayrı benzerlik skorları hesaplanır ve hangi ağacın daha etkili yani daha iyi olduğunu tespit etmek için Eşitlik \ref{eq:05}'deki kazanç hesabı yapılır\cite{10}. Yukarıda belirttiğimiz benzerlik skorunun sonucu ile dallar değerlendirilirken, elde ettiğimiz Eşitlik \ref{eq:05}'deki kazanç değeri ile ağacın tamamı değerlendirilmektedir\cite{10}.
 
 \begin{equation}
 \label{eq:05}
@@ -214,8 +215,9 @@ Gradyan yükseltme üç unsur içerir:
 \end{equation}
 
 \subsection{\textbf{Random Forest}}
-\quad Rastgele orman algoritması, denetimli öğrenme algoritması olup hem sınıflandırmada hem de regresyon analizlerinde kullanılır. Aşırı uyumu önler. Random Forest, karar ağaçlarını rastgele bir şekilde oluşturur. İstikrarlı ve doğru bir sonuç tahmini yapabilmek için bunları birleştirir. Ağaç sayısı ve sonuçları arasında doğrudan ilişki bulunmaktadır. Ağaç sayısını ne kadar arttırırsak o kadar kesin bir sonuç elde ederiz\cite{11}\cite{12}.
+\quad Rastgele Orman Algoritması, denetimli öğrenme algoritması olup hem sınıflandırmada hem de regresyon analizlerinde kullanılır. Aşırı uyumu önler. Random Forest, karar ağaçlarını rastgele bir şekilde oluşturur. İstikrarlı ve doğru bir sonuç tahmini yapabilmek için bunları birleştirir. Rastgele Orman Algoritması’nda; ağaç sayısı ve çıktıları arasında doğrusal bir ilişki vardır. Ağaç sayısı ne kadar arttırılırsa o kadar kesin bir sonuç elde edilir\cite{11}\cite{12}.
 
+\quad Rastgele Orman Algoritması, ağaç büyütme aşamasında, normal durumun üzerine rastgelelik durumunu da kullanmaktadır\cite{12}.
 \begin{figure}[!h]
 	\centering
 	\begin{center}
@@ -227,13 +229,11 @@ Gradyan yükseltme üç unsur içerir:
 	\label{fig:04}
 \end{figure}
 
-\quad Rastgele orman algoritması, ağaç büyütme aşamasında, normal durumun üzerine rastgelelik durumunu da kullanıyor\cite{12}.
-
 \pagebreak
 \subsection{\textbf{LightGBM Regressor}}
-\quad LightGBM, histogram tabanı kullanan bir algoritmadır. Sürekli verileri giriş olarak alır, bu verileri kesikli hale getirir. Bunu yapmasındaki amaç maliyeti azaltmaktır. Karar ağacı algoritmasının bölünmesi ile doğru orantılıdır. Veriyi optimize etmesi, eğitim süresini düşürür ve daha az kaynak kullanılmasını sağlar\cite{13}.
+\quad LightGBM, histogram tabanı kullanan bir algoritmadır. Sürekli verileri giriş olarak alır, bu verileri kesikli hale getirir. Bunu yapmasındaki amaç maliyeti azaltmaktır. Karar Ağacı Algoritması’nın bölünmesi ile doğru orantılıdır. Veriyi optimize etmesi, eğitim süresini düşürür ve daha az kaynak kullanılmasını sağlar\cite{13}.
 
-\quad Karar ağacı algoritmasında yaprak ve seviye olarak iki farklı strateji kullanılabilir. Yaprak stratejisinde kayıp oranını azaltan yapraklar üzerinden bölünme işlemi devam eder. Seviye stratejisinde hedeflenen durum ise ağaç büyütülürken dengesini korumaktır. Yaprak stratejisinde hatayı minimize etmek amaçlandığı için, seviye stratejisine göre daha düşük hata oranına sahiptir. Bunun etkilediği durumlardan biri de öğrenme aşamasının hızlanmasıdır. Bu yüzden, boosting algoritmalarının geri kalanından ayrılır. Elimizde bulunan veri sayısı ne kadar çoksa, yaprak stratejisini kullanmak o kadar mantıklı olur. Aşırı öğrenmeye sebebiyet vermemek için veri sayısının az olduğu durumlarda kullanıma uygun değildir. Bu durumda da seviye stratejisi kullanılır\cite{13}.
+\quad Karar Ağacı Algoritması’nda yaprak ve seviye olarak iki farklı strateji kullanılabilir. Yaprak stratejisinde kayıp oranını azaltan yapraklar üzerinden bölünme işlemi devam eder. Seviye stratejisinde hedeflenen durum ise ağaç büyütülürken dengesini korumaktır. Yaprak stratejisinde hatayı minimize etmek amaçlandığı için, seviye stratejisine göre daha düşük hata oranına sahiptir. Bunun etkilediği durumlardan biri de öğrenme aşamasının hızlanmasıdır. Bu yüzden, boosting algoritmalarının geri kalanından ayrılır. Elimizde bulunan veri sayısı ne kadar çoksa, yaprak stratejisini kullanmak o kadar mantıklı olur. Aşırı öğrenmeye sebebiyet vermemek için veri sayısının az olduğu durumlarda kullanıma uygun değildir. Bu durumda da seviye stratejisi kullanılır\cite{13}.
 
 \begin{figure}[!h]
 	\centering
@@ -258,8 +258,8 @@ Gradyan yükseltme üç unsur içerir:
 \end{figure}
 \pagebreak
 
-\subsection{\textbf{CatBoost Regressor}}
-\quad Gradient Boosting tabanlı açık kaynak kodlu bir makine öğrenmesi algoritmasıdır. Veri hazırlığı süresini düşürdüğü için önemli bir yere sahiptir. Elinde bulunan boş veriler ile baş edebilir ancak kategorik veriler için kodlamaya ihtiyaç duyar. Yüksek öğrenme hızı, sayısal, kategorik ve metin verileri ile çalışabilmesi en belirgin özelliklerindendir. Ayrıca aşırı öğrenme sorununu ortadan kaldırmak için simetrik ağaç kurar. Over-fitting (aşırı öğrenme) durumunun oluşması durumunda, belirlenen özelliklere varmadan önce öğrenme işlemi durdurulur\cite{14}.
+\subsection{\textbf{CatBoost (Category Boosting) Regressor}}
+\quad Gradient Boosting tabanında çalışan, açık kaynaklı bir algoritmadır. Veri hazırlığı süresini düşürdüğü için, boosting algoritmaları arasında önemli bir yere sahiptir. Elinde bulunan boş veriler ile baş edebilir ancak kategorik veriler için kodlamaya ihtiyaç duyar. Yüksek öğrenme hızı, sayısal, kategorik ve metin verileri ile çalışabilmesi en belirgin özelliklerindendir. Ayrıca aşırı öğrenme sorununu ortadan kaldırmak için simetrik ağaç kurar. Aşırı öğrenme durumunun oluşması durumunda, belirlenen özelliklere varmadan önce öğrenme işlemi durdurulur\cite{14}.
 
 \begin{figure}[!h]
 	\centering
@@ -274,7 +274,7 @@ Gradyan yükseltme üç unsur içerir:
 
 \section{\textbf{SONUÇLAR}}
 
-\quad Veri setimizdeki verilerin \%70'ini eğitim, \%30'unu ise test verisi olarak ayırdık. Daha sonra ayırdığımız verileri, algoritmalarımızın eğitim ve tahmin aşamalarında kullandık. Bu aşamalar sonucunda elde ettiğimiz doğruluk değerlerine Şekil \ref{fig:08}'de, $MSE$ (ortalama kare hatası) değerlerine de Şekil \ref{fig:09}'da yer verdik.
+\quad Veri setindeki veriler \%70 eğitim, \%30 ise test verisi olarak ayrılmıştır. Daha sonra ayrılan veriler, algoritmaların eğitim ve tahmin aşamalarında kullanılmıştır. Bu aşamalar sonucunda elde edilen doğruluk değerlerine Şekil \ref{fig:08}'de, $MSE$ (ortalama kare hatası) değerlerine de Şekil \ref{fig:09}'da yer verilmiştir.
 
 \begin{figure}[!h]
 	\centering
@@ -298,7 +298,7 @@ Gradyan yükseltme üç unsur içerir:
 	\label{fig:09}
 \end{figure}
 
-\quad İkinci el araç fiyatlarının tahmin edilebilmesi için "100.000 UK Used Car" \cite{3} veri setindeki "BMW.csv" verisini aldık. DT, GB, XGB, RF, LGBM ve CB regressor algoritmalarını kullandık. Bu algoritmaların $r2$ ve $MSE$ değerleri Tablo \ref{tbl:01}'de yer almaktadır.
+\quad İkinci el araç fiyatlarının tahmin edilebilmesi için "100.000 UK Used Car" \cite{3} veri setindeki "BMW.csv" verisi alındı. DT, GB, XGB, RF, LGBM ve CB regressor algoritmaları kullanılmıştır. Bu algoritmaların $r2$(doğruluk değeri) ve $MSE$(hata değeri) değerleri Tablo \ref{tbl:01}'de yer almaktadır.
 
 \begin{table}[h]
 	\centering
@@ -317,11 +317,12 @@ Gradyan yükseltme üç unsur içerir:
 	\label{tbl:01}
 \end{table}
 
-\quad Tablo \ref{tbl:01}'i incelersek, en yüksek doğruluk değerinin $\%96.14$ oranıyla CatBoost algoritmasına ait olduğunu görebiliriz. Aynı zamanda en düşük $MSE$ değeri de $0.0372$ oranıyla yine CatBoost'a ait. Bu verilerden en düşük doğruluk değerine sahip olan algoritma ise Decision Tree$(\%92.09)$'dur. $r2$ ve $MSE$ değerlerinin arasındaki ters orantıdan dolayı, en yüksek $MSE$ değeri yine Decision Tree$(0.0825)$'e aittir. Diğer algoritmaların $r2$ ve $MSE$ değerlerini de Tablo \ref{tbl:01} üzerinde inceleyebiliriz.
-
+\quad Tablo \ref{tbl:01}'i incelersek, en yüksek doğruluk değeri$(r2)$nin $\%96.14$ oranıyla CatBoost algoritmasına ait olduğunu görebiliriz. Aynı zamanda en düşük $MSE$(hata) değeri de $0.0372$ oranıyla yine CatBoost algoritmasına aittir. Bu verilerden en düşük doğruluk değerine sahip olan algoritma ise Decision Tree$(\%92.09)$ algoritmasıdır. $r2$ ve $MSE$ değerlerinin arasındaki ters orantıdan dolayı, en yüksek $MSE$ değeri yine Decision Tree$(0.0825)$ algoritmasına aittir. Diğer algoritmaların $r2$ ve $MSE$ değerleri de Tablo \ref{tbl:01} üzerinden incelenebilir.
 
 \subsection{\textbf{Cross-Validation (Çapraz Doğrulama)}}
-\quad Regresyon algoritmalarımız birer kez eğitildi ve test edildi. Bu eğitimlerin sonuçlarını da Tablo \ref{tbl:01}'de belirttik. Şimdi  DT, GB, XGB, RF, LGBM ve CB regressor algoritmalarımızı \textbf{Cross-Validation} metoduyla 30 kez rastgele olacak şekilde çalıştırdık ve sonuçları Şekil \ref{fig:10}, \ref{fig:11}, \ref{fig:12}, \ref{fig:13}, \ref{fig:14} ve \ref{fig:15}'de verdik.
+\quad Cross-Validation, makine öğrenmesi algoritmalarının tâbi tutulabileceği bir fonksiyondur. Modelin eğitiminde kullanılacak olan veriyi, her seferinde farklı kısımlardan bölerek $(train-test)$ optimum sonucu bulmayı amaçlar.
+
+\quad Regresyon algoritmaları birer kez eğitilmiştir. Bu eğitimlerin sonuçları da Tablo \ref{tbl:01}'de belirtilmiştir. DT, GB, XGB, RF, LGBM ve CB algoritmaları \textbf{Cross-Validation} metoduyla 30 kez rastgele olacak şekilde çalıştırılmış ve sonuçları Şekil \ref{fig:10}, \ref{fig:11}, \ref{fig:12}, \ref{fig:13}, \ref{fig:14} ve \ref{fig:15}'de verilmiştir.
 
 \begin{figure}[!h]
 	\centering
@@ -389,7 +390,7 @@ Gradyan yükseltme üç unsur içerir:
 	\label{fig:15}
 \end{figure}
 
-\quad Bu algoritmaların Cross-Validaion sonuçlarının ortalamaları Şekil \ref{fig:16}'daki gibidir. Bu değerler aynı zamanda Tablo \ref{tbl:02}'de de sayısal olarak yer almakta.
+\quad Bu algoritmaların Cross-Validation sonuçlarının ortalamaları Şekil \ref{fig:16}'daki gibidir. Bu değerler aynı zamanda Tablo \ref{tbl:02}'de de sayısal olarak yer almaktadır.
 
 \begin{figure}[!h]
 	\centering
@@ -415,14 +416,15 @@ Gradyan yükseltme üç unsur içerir:
 		\textbf{LGBM}	& 0.9531		\\ \hline
 		\textbf{CB}		& \textbf{0.9562}	\\ \hline
 	\end{tabular}
-	\caption{DT, GB, XGB, RF, LGBM ve CB regressor algoritmalarının Cross-Validation sonuçlarının ortalama(mean) degerleri}
+	\caption{DT, GB, XGB, RF, LGBM ve CB algoritmalarının Cross-Validation sonuçlarının ortalama(mean) degerleri}
 	\label{tbl:02}
 \end{table}
 
-\quad Tablo \ref{tbl:02}'yi incelersek, en yüksek doğruluk değerinin $\%95.62$ oranıyla CatBoost algoritmasına ait olduğunu görebiliriz. Bu verilerden en düşük doğruluk değerine sahip olan algoritma ise Decision Tree$(\%91.60)$'dır. Diğer algoritmaların Cross-Validation sonuçlarının ortalama değerlerini de Tablo \ref{tbl:02} üzerinde inceleyebiliriz.
+\quad Tablo \ref{tbl:02}'yi incelersek, en yüksek doğruluk değerinin $\%95.62$ oranıyla CatBoost algoritmasına ait olduğu görülebilir. Bu verilerden en düşük doğruluk değerine sahip olan algoritma ise Decision Tree$(\%91.60)$ algoritmasıdır. Diğer algoritmaların Cross-Validation sonuçlarının ortalama değerlerini de Tablo \ref{tbl:02} üzerinde incelenebilir.
 
 \subsection{\textbf{Valid Data-Pred Data$(Diff)$}}
 
+\quad Şekil \ref{fig:17}, \ref{fig:18}, \ref{fig:19}, \ref{fig:20}, \ref{fig:21} ve \ref{fig:22}'de de gösterildiği gibi; gerçek $(valid)$ verilerimiz turuncu, algoritmanın tahmin $(predict)$ değerleri ise mavi hatlarla belirtilmiştir. Bu grafikleri oluşturmaktaki amaç; tahmin verisinin gerçek veriden ne kadar saptığını(uzaklaştığını/saptığını) görmektir.
 \begin{figure}[!h]
 	\centering
 	\begin{center}
@@ -490,11 +492,10 @@ Gradyan yükseltme üç unsur içerir:
 \end{figure}
 \pagebreak
 
-\quad Şekil \ref{fig:17}, \ref{fig:18}, \ref{fig:19}, \ref{fig:20}, \ref{fig:21} ve \ref{fig:22}'de de gösterildiği gibi; gerçek $(valid)$ verilerimiz turuncu, algoritmanın tahmin $(predict)$ değerleri ise mavi hatla gösterilmiştir. Bu grafikler oluşturulurken amacımız; tahmin verisinin gerçek veriden ne kadar saptığını(uzaklaştığını) görmektir.
 
 \section{\textbf{SONUÇ}}
 
-\quad Bu projede kullandığımız veri seti sayesinde ikinci el araçların, değerinin altında veya üstünde bir fiyata satılması yerine, olması gereken fiyatta satılmasını sağlamak için; yapay zeka kullanarak fiyat tahmini yapmaya çalıştık. Tahmin işlemini, daha önceden belirlenen algoritmaları kullanarak yaptık. Algoritmaları, makalenin önceki başlıklarında da anlattığımız çeşitli işlemlere tâbi tutarak bazı sonuçlar elde ettik. Bu sonuçları karşılaştırdık ve en iyi agoritmayı bulmaya çalıştık. Elimizdeki veri setiyle en uyumlu çalışan algoritmayı bulduk ve raporladık. Eğitim sonuçlarını daha yüksek oranlara taşımak için de veri seti optimize edilebilir, gerekli öznitelikler eklenebilir veya gereksiz olanlar çıkartılabilir. Bu sayede daha doğru bir tahminleme işlemi yapabiliriz.
+\quad Projede kullanılan veri seti sayesinde ikinci el araçların, değerinin altında veya üzerinde bir fiyata satılması yerine, olması gereken bir fiyatta satılmasını sağlamak için; yapay zekâ algoritmaları kullanılarak fiyat tahmini yapılmaya çalışıldı. Algoritmaları, makalenin önceki başlıklarında da anlatıldığı gibi çeşitli işlemlere tâbi tutularak, bazı sonuçlar elde edildi. Çıkan sonuçlar karşılaştırıldı ve en iyi algoritma bulunmaya çalışıldı. Eldeki veri setiyle en uyumlu çalışan algoritma bulundu ve raporlandı. Eğitim sonuçlarını daha yüksek oranlara taşıyabilmek için veri seti optimize edilebilir, gerekli öznitelikler eklenebilir veya gereksiz olanlar çıkartılabilir. Bu sayede daha doğru bir tahminleme işlemi yapılabilir.
 
 \begin{figure}[!h]
 	\centering
@@ -506,13 +507,28 @@ Gradyan yükseltme üç unsur içerir:
 	\caption{Algoritmaların Cross-Validation Sonuçları (3D Grafik)}
 	\label{fig:23}
 \end{figure}
+\quad $X$ eksenine bakıldığı zaman algoritmaları, $Y$ eksenine bakıldığı zaman algoritmaların çalışma sayıları görülebilir. Daha sonradan 3. boyuta ise bu çalışmaların skorları $Z$ ekseni olarak eklendi ve Şekil \ref{fig:23}'deki 3D grafik elde edildi. Algoritmalar ve çalışma skorları, kendi arasında sıralı olduğu için, sütunlara çapraz açıdan bakıldığında en verimli algoritmanın en yüksekte kaldığı görülebilir.
 
-\quad $X$ eksenine baktığımız zaman algoritmaları, $Y$ eksenine baktığımız zaman algoritmaların çalışma sayılarını görüyoruz. Daha sonradan 3. boyuta ise bu çalışmaların skorları $Z$ ekseni olarak ekleniyor ve Şekil \ref{fig:23}'deki 3D grafiği elde ediyoruz. Algoritmalar ve çalışma skorları kendi arasında sıralı olduğu için, sütunlara çapraz açıdan bakıldığında en verimli algoritmanın en yüksekte kaldığını görebiliriz.
+\quad Aynı veri setini kullanan başka bir kullanıcının verilerinin\cite{17} çıktıları da Tablo \ref{tbl:03}'te yer almaktadır. Bu veriler incelendiği zaman bazı noktalarda daha yüksek, bazı noktalarda daha düşük doğruluk $(r2)$ değeri elde edildiği görülebilir. Ancak $MSE$ değeri incelendiği zaman, projemizin daha düşük hata değerine sahip olduğu görülebilir. Bunun sebebi, veri setinin $zscore$ işlemine tâbi tutulmuş olmasıdır.
 
+\begin{table}[h]
+	\centering
+	
+\begin{tabular}{|c|cc|cc|}
+\hline
+\multirow{2}{*}{}          & \multicolumn{2}{c|}{\textbf{Mevcut Proje}}      & \multicolumn{2}{c|}{\textbf{rajan1002}}         \\ \cline{2-5} 
+                           & \multicolumn{1}{c|}{\textbf{R2}} & \textbf{MSE} & \multicolumn{1}{c|}{\textbf{R2}} & \textbf{MSE} \\ \hline
+\textbf{Random Forest}     & \multicolumn{1}{c|}{0.9533}      & \textbf{0.0453}       & \multicolumn{1}{c|}{0.9508}      & 0.1180       \\ \hline
+\textbf{Gradient Boosting} & \multicolumn{1}{c|}{0.9296}      & 0.0657       & \multicolumn{1}{c|}{0.9479}      & 0.1214       \\ \hline
+\textbf{XGB Regressor}     & \multicolumn{1}{c|}{\textbf{0.9538}}      & 0.0447       & \multicolumn{1}{c|}{\textbf{0.9562}}      & \textbf{0.1113}       \\ \hline
+\end{tabular}
+\caption{\textbf{rajan1002}'nin eğitim sonuçları\cite{17} ile karşılaştırma}
+	\label{tbl:03}
+\end{table}
 \newpage
 %%%%%%%%%%%%%%%%%%%%
 \newpage
-\begin{thebibliography}{16}
+\begin{thebibliography}{17}
 
 \bibitem{1}
 DergiPark - İkinci El Otomobil Talep Fiyatının Regresyon Analizi
@@ -577,6 +593,10 @@ SlideShare - Random Forest
 \bibitem{16}
 BradleyBoehmke - GBM
 \\\texttt{\href{https://bradleyboehmke.github.io/HOML/gbm.html}{\nolinkurl{bradleyboehmke.github.io/gbm.html}}}
+
+\bibitem{17}
+Kaggle - Used Car Price Prediction
+\\\texttt{\href{https://www.kaggle.com/rajan1002/used-car-price-prediction-r2-0-956}{\nolinkurl{kaggle.com/rajan1002/used-car-price-prediction}}}
 
 \end{thebibliography}
 
